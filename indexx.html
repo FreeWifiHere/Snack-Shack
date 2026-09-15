@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Snack Shack menu — real candy wrapper photos and clear prices." />
+  <title>The Snack Shack | Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="notification-stack" class="notification-stack" aria-live="polite"></div>
+  <header class="site-header"><a class="brand" href="#menu" aria-label="The Snack Shack home"><span class="brand-mark" aria-hidden="true">S</span><span><strong>The Snack Shack</strong><small>student lunch club</small></span></a><nav aria-label="Main navigation"><a href="#menu">Menu</a><a href="#pickup">Pickup info</a><a class="nav-order" href="#order-note">My picks <span id="pick-count">0</span></a></nav></header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">TODAY'S LUNCHTIME DROP <span class="status-dot"></span> open now</p><h1 id="hero-title">Good snacks.<br /><em>Short lines.</em></h1><a class="primary-button hero-menu-button" href="#menu">See the menu <span aria-hidden="true">↓</span></a><p class="hero-subtitle">Snack Shack sells quick, tasty snacks for between classes. Find us at the library doors during lunch.</p></div><div class="hero-art" aria-label="Illustration of a snack box" role="img"><span class="sun"></span><span class="sparkle sparkle-one">✦</span><span class="sparkle sparkle-two">✦</span><div class="snack-box"><span class="box-label">SNACK<br /><b>SHACK</b></span><span class="box-chip chip-one"></span><span class="box-chip chip-two"></span></div></div></section>
+    <section id="menu" class="menu-section" aria-labelledby="menu-title"><div class="section-heading"><div><p class="eyebrow">THE FULL SNACK MENU</p><h2 id="menu-title">Pick your snack</h2><p class="menu-intro">Real wrapper photos, clear prices, and something for every kind of craving.</p></div><p class="stock-note"><span class="stock-dot"></span> stock checked at 10:30 AM</p></div><div class="filters" role="group" aria-label="Filter snacks by type"><button class="filter active" data-filter="all">All snacks</button><button class="filter" data-filter="sweet">Sweet</button><button class="filter" data-filter="salty">Salty</button></div><div id="snack-grid" class="snack-grid" aria-live="polite"></div></section>
+    <section id="pickup" class="pickup-section" aria-labelledby="pickup-title"><div class="pickup-icon" aria-hidden="true">↗</div><div><p class="eyebrow">EASY DOES IT</p><h2 id="pickup-title">Pickup in 3 steps</h2><p>Choose a snack, tell us when you'll come by, then meet us at the <strong>library doors</strong> during lunch.</p></div><div class="pickup-details"><div><span>WHERE</span><strong>Library doors</strong></div><div><span>WHEN</span><strong>12:05–12:35 PM</strong></div><div><span>PAYMENT</span><strong>Cash or school card</strong></div></div></section>
+    <section id="order-note" class="order-section" aria-labelledby="order-title"><div><p class="eyebrow">READY WHEN YOU ARE</p><h2 id="order-title">Your quick pick list</h2><p id="order-empty">Tap any snack above to save it here. No account, no checkout maze.</p><ul id="pick-list" class="pick-list"></ul></div><div class="time-card"><label for="pickup-time">I'll pick up around</label><select id="pickup-time"><option>12:05 PM</option><option>12:15 PM</option><option>12:25 PM</option><option>12:35 PM</option></select><button id="clear-picks" class="text-button" type="button">Clear picks</button><button id="submit-pickup" class="primary-button submit-pickup" type="button" disabled>Submit pickup</button><p id="saved-message" class="saved-message" role="status"></p></div></section>
+  </main>
+  <footer><span>The Snack Shack is run by students, for students. <small>Made by Mia.</small></span><a href="#menu">Back to menu ↑</a></footer>
+  <dialog id="snack-dialog" aria-labelledby="dialog-title"><button class="dialog-close" id="dialog-close" aria-label="Close snack details">×</button><div id="dialog-visual" class="dialog-visual"></div><p class="eyebrow" id="dialog-type"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-bottom"><strong id="dialog-price"></strong><button id="dialog-add" class="primary-button" type="button">Add to my picks</button></div></dialog>
+  <script src="game.js"></script><script src="submit.js"></script>
+</body>
+</html>
